@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Le combo</h1>
+    <div id="slider">
+        <img src="./images/progressOfTheGame.jpg" alt="Règle du jeu" id="slide">
+        <div id="precedent" onclick="ChangeSlide(-1)"><</div> 
+        <div id="suivant" onclick="ChangeSlide(1)">></div>
+    </div>
+    <input class="btnCombo" type="button" id="playGame" value="Distrubuer les cartes">
+    <input class="btnCombo" type="button" id="btnJouer" value="Jouer">
+    <input class="btnCombo" type="button" value="Rejouer" id="reset" onClick="window.location.reload();">
+    <ul class="Players">
+        <li>
+            <label for="Player1">Joueur 1 : </label>
+            <input type="text" id="Player1" minlength="1" maxlength="15" name="Players[]" value="Claire">
+        </li>
+        <li>
+            <label for="Player2">Joueur 2 : </label>
+            <input type="text" id="Player2" minlength="1" maxlength="15" name="Players[]" value="Bryan">
+        </li>
+        <li>
+            <label for="Player3">Joueur 3 : </label>
+            <input type="text" id="Player1" minlength="3" maxlength="15" name="Players[]" value="Samuel">
+        </li>
+        <li>
+            <label for="Player4">Joueur 4 : </label>
+            <input type="text" id="Player4" minlength="1" maxlength="15" name="Players[]" value="Douglas">
+        </li>
+    </ul>
+    <div id="jeu">
+        <input class="btnCombo" type="button" id="btnValidCard" value="Valider le choix des cartes">
+        <div id="deckPlayer1" class="deckPlayer"></div>
+        <div id="deckPlayer2" class="deckPlayer"></div>
+        <div id="deckPlayer3" class="deckPlayer"></div>
+        <div id="deckPlayer4" class="deckPlayer"></div>
+        <p class="chooseCard">Choisissez deux cartes pour les retourner</p>
+        <div class="centre">
+            <div id="pioche" class="pioche">
+                <img class="card" src="./images/combo.jpg" alt="Pioche">
+            </div>
+            <div id="ben"></div>
+        </div>
+    </div>
+    <div class="popUp">
+        <p class="chooseChange">Choisissez une carte à échanger ou la jeter dans la défausse</p>
+        <p class="chooseChange2">Choisissez une carte à échanger</p>
+        <span id="popUpCarte"></span>
+        <input class="btnCombo" type="button" value="Mettre cette carte à la défausse" id="putBen">
+    </div>
+    <script src="combo.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

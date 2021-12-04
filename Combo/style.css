@@ -1,0 +1,239 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #19753d;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    display: none;
+}
+
+ul.Players {
+    list-style: none;
+    display: none;
+}
+
+ul.Players>*+* {
+    margin-top: 1em;
+}
+
+#jeu {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    display: none;
+}
+
+#reset {
+    top: 2em;
+    position: absolute;
+    right: 2em;
+}
+
+#pickJ1,
+#pickJ2 {
+    display: none;
+}
+
+.deckPlayer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50vw;
+    position: absolute;
+    z-index: 10;
+    height: fit-content;
+}
+
+#deckPlayer1 {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#deckPlayer2{
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#deckPlayer3{
+    top: 0;
+    bottom: 0;
+    left: -10%;
+    margin: auto 0;
+    transform: rotate(90deg);
+}
+
+
+#deckPlayer4{
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: -10%;
+    transform: rotate( -90deg);
+}
+
+.centre {
+    display: none;
+    justify-content: space-between;
+    max-width: 30vw;
+    max-height: 150px;
+    position: absolute;
+    /* Center div */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+img.card {
+    width: 150px;
+}
+
+.pioche {
+    cursor: pointer;
+}
+
+.popUp {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.9);
+    display: none;
+    justify-content: center;
+}
+
+.popUp span {
+    position: relative;
+    top: 30em;
+}
+
+#btnValidCard {
+    display: none;
+    top: 50em;
+}
+
+.chooseCard{
+    color: white;
+    margin: 0 auto;
+    font-size: 2.5em;
+    position: relative;
+    top: 40%;
+    width: fit-content;
+    display: none;
+}
+
+.hoverCard:hover{
+    box-shadow: 0px 0px 20px 5px #fff;
+}
+
+.chooseChange , .chooseChange2{
+    color: white;
+    margin: 0 auto;
+    font-size: 2.5em;
+    position: absolute;
+    top: 8em;
+    width: fit-content;
+    display: none;
+    z-index: 20;
+}
+
+#putBen{
+    position: absolute;
+    top: 60em;
+}
+
+#btnJouer{
+    display: none; 
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.btnCombo{
+    position: relative;
+    border: solid 1px white;
+    background-color: transparent;
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#playGame{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    z-index: 20;
+}
+
+/* Slider  */
+
+#silder{
+    position: relative;
+    max-width: 80vw;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#slider {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#slider img{
+    max-width: 100vw;
+    height: auto;
+    width: 100%;
+}
+
+#precedent, #suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+#precedent {
+    left: 0;
+    display: none;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 1;
+}
